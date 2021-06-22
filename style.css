@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    font-weight: 400;
+ }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8em;
+    max-height: 80em;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 1em 2em .5em 2em;
+    padding-top: 1em;
+}
+
+.card {
+    margin: 0em 0em 2em 0em;
+    width: 30vw;
+    min-height: 20em;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: .5em 0 0 .5em;
+}
+
+.image {
+    background: linear-gradient(
+        rgba(102, 30, 140, 0.7), 
+        rgba(106, 33, 140, 0.6)
+        ),
+        url(images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 21em;
+    border-radius: 0 .5em .5em  0;   
+    width: 30vw;   
+    margin-right: 0em;
+}
+
+.para {
+    font-size: .8em;
+    line-height: 1.5pc;
+    font-weight: 400;
+    margin: 2em 7em 0em 4.5em;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.3pc;
+    margin: 0em 10.5em 3em 6.2em;
+    text-transform: uppercase;
+    font-size: .6em;
+}
+
+.inline {
+    display: inline-block;
+    color: hsla(0, 0%, 100%, 0.6);
+
+}
+
+.stats-heading {
+    display: flex;
+    font-weight: 590;
+    margin-top: 4em;
+    margin-bottom: .2em;
+}
+
+#insights {
+    color: hsl(277, 64%, 61%);
+}
+
+.attribution { 
+    text-align: center; 
+    color: hsl(228, 45%, 44%);
+    margin-top: 2em;
+}
+
+.main-heading, .stats-heading {
+    color: hsl(0, 0%, 100%);
+}
+
+.stats > .inline > .stats-heading {
+    font-size: 2em;
+}
+
+@media  screen and (max-width: 1135px) {
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-heading {
+        margin-top: 1em;
+    }
+
+    .image {
+        min-width: 28em;
+    }
+
+    .inline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    main {
+        margin-top: 1em;
+        flex-direction: column-reverse;
+    }
+
+    .card {
+        width: 75vw;
+    }
+    .image {
+        background: linear-gradient(
+                 rgba(102, 30, 140, 0.7), 
+                 rgba(106, 33, 140, 0.6)
+                ),
+        url(images/image-header-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: .5em .5em 0em 0em;
+    }
+
+    .stats {
+        flex-direction: row;
+    }
+
+}
+
+@media screen and (max-width: 419px) {
+    .image {
+        margin-left: 4vh;
+        margin-right: 4vh;
+        border-radius: .5em .5em 0em 0em;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+
+    .card {
+        min-width: 95vw;
+        margin-left: 1em;
+        margin-right: 0em;
+    }
+
+    .para, h2 {
+        text-align: center;
+    }
+
+
+}    
